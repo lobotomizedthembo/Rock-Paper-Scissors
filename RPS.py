@@ -12,7 +12,7 @@ def Game():
     compWins = 0
     while (userWins <= 2 and compWins <= 2):
         user_input = input(
-            "Please enter Rock, Paper or Scissors(Case Sensitive): ")
+            "Please enter Rock, Paper or Scissors: ").lower
         print("You have chosen "+user_input)
         time.sleep(2)
         comp_out = "Rock", "Paper", "Scissors"
@@ -23,23 +23,23 @@ def Game():
         if(user_input == comp_out):
             print("It's a Draw")
 # User Wins
-        if(user_input == "Rock" and comp_out == "Scissors"):
+        if(user_input == "rock" and comp_out == "Scissors"):
             print("You win")
             userWins = userWins + 1
-        elif(user_input == "Paper" and comp_out == "Rock"):
+        elif(user_input == "paper" and comp_out == "Rock"):
             print("You win")
             userWins = userWins + 1
-        elif(user_input == "Scissors" and comp_out == "Paper"):
+        elif(user_input == "scissors" and comp_out == "Paper"):
             print("You win")
             userWins = userWins + 1
 # Computer Wins
-        elif(user_input == "Scissors" and comp_out == "Rock"):
+        elif(user_input == "scissors" and comp_out == "Rock"):
             print("Computer Wins")
             compWins = compWins + 1
-        elif(user_input == "Rock" and comp_out == "Paper"):
+        elif(user_input == "rock" and comp_out == "Paper"):
             print("Computer Wins")
             compWins = compWins + 1
-        elif(user_input == "Paper" and comp_out == "Scissors"):
+        elif(user_input == "paper" and comp_out == "Scissors"):
             print("Computer Wins")
             compWins = compWins + 1
 
@@ -56,7 +56,7 @@ def Game():
         print("You Are The Ultimate Winner!!!")
     else:
         print("It's a Draw")
-    playAgain = input(("Would you like to play again?(y or n): "))
+    playAgain = input(("Would you like to play again?(y or n): ")).lower
     if (playAgain == 'y'):
         Game()
     else:

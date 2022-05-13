@@ -11,8 +11,8 @@ def Game():
     userWins = 0
     compWins = 0
     while (userWins <= 2 and compWins <= 2):
-        user_input = input(
-            "Please enter Rock, Paper or Scissors: ").lower
+        user_input = input("Please enter Rock, Paper or Scissors: ")
+        user_input = user_input.lower()
         print("You have chosen "+user_input)
         time.sleep(2)
         comp_out = "Rock", "Paper", "Scissors"
@@ -56,7 +56,8 @@ def Game():
         print("You Are The Ultimate Winner!!!")
     else:
         print("It's a Draw")
-    playAgain = input(("Would you like to play again?(y or n): ")).lower
+    playAgain = input(("Would you like to play again?(y or n): "))
+    playAgain = playAgain.lower()
     if (playAgain == 'y'):
         Game()
     else:
